@@ -7,181 +7,674 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <RelativeLayout
-        android:id="@+id/layout_empty"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="8"
-        android:visibility="gone">
+        android:layout_weight="8">
 
-        <TextView
-            android:id="@+id/text_empty"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="150dp"
-            android:fontFamily="@font/light"
-            android:gravity="center"
-            android:text="SEM PAREDES ADICIONADAS"
-            android:textSize="28sp" />
-
-        <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_below="@+id/text_empty"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="15dp"
-            android:src="@drawable/icon_empty" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/layout_room"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="8"
-        android:padding="20dp"
-        android:visibility="visible">
-
-        <RelativeLayout
-            android:id="@+id/layout_wall1"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
-            android:background="@drawable/bg_wall"
-            android:orientation="horizontal"
-            android:padding="20dp"
-            android:visibility="visible">
+            android:layout_height="wrap_content">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="60dp"
-                android:src="@drawable/icon_wall" />
+            <RelativeLayout
+                android:id="@+id/layout_empty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:visibility="visible">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="70dp"
-                android:layout_marginStart="84dp"
-                android:fontFamily="@font/regular"
-                android:gravity="center"
-                android:text="Parede 1"
-                android:textSize="25sp" />
+                <TextView
+                    android:id="@+id/text_empty"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="150dp"
+                    android:fontFamily="@font/light"
+                    android:gravity="center"
+                    android:text="SEM PAREDES ADICIONADAS"
+                    android:textSize="28sp" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="32dp"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:src="@drawable/icon_info" />
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/text_empty"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/icon_empty" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_room"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:padding="20dp"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/layout_wall1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/bg_wall"
+                    android:orientation="horizontal"
+                    android:padding="20dp"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/wall1_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="60dp"
+                            android:src="@drawable/icon_wall" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="70dp"
+                            android:layout_marginStart="84dp"
+                            android:fontFamily="@font/regular"
+                            android:gravity="center"
+                            android:text="Parede 1"
+                            android:textColor="@color/gray_text"
+                            android:textSize="25sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/icon_info" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/wall1_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_below="@id/wall1_header">
+
+                        <LinearLayout
+                            android:id="@+id/wal1_lineDoor"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/bg_info_wall"
+                            android:orientation="horizontal"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="8"
+                                android:fontFamily="@font/black"
+                                android:text="Número de portas:"
+                                android:textSize="22sp" />
+
+                            <TextView
+                                android:id="@+id/wall1_portas"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:fontFamily="@font/black"
+                                android:text=""
+                                android:textSize="22sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/wal1_lineWindow"
+                            android:layout_below="@id/wal1_lineDoor"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="8"
+                                android:fontFamily="@font/black"
+                                android:text="Número de janelas:"
+                                android:textSize="22sp" />
+
+                            <TextView
+                                android:id="@+id/wall1_janelas"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:fontFamily="@font/black"
+                                android:text=""
+                                android:textSize="22sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/wal1_lineHeight"
+                            android:layout_below="@id/wal1_lineWindow"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/bg_info_wall"
+                            android:orientation="horizontal"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="40"
+                                android:fontFamily="@font/black"
+                                android:text="Altura:"
+                                android:textSize="22sp" />
+
+                            <TextView
+                                android:id="@+id/wall1_altura"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:fontFamily="@font/black"
+                                android:text=""
+                                android:textSize="22sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_below="@id/wal1_lineHeight"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="40"
+                                android:fontFamily="@font/black"
+                                android:text="Largura:"
+                                android:textSize="22sp" />
+
+                            <TextView
+                                android:id="@+id/wall1_largura"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:fontFamily="@font/black"
+                                android:text=""
+                                android:textSize="22sp" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_wall2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout_wall1"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/bg_wall"
+                    android:orientation="horizontal"
+                    android:padding="20dp"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/wall2_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="60dp"
+                            android:src="@drawable/icon_wall" />
 
 
-        </RelativeLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="70dp"
+                            android:layout_marginStart="84dp"
+                            android:fontFamily="@font/regular"
+                            android:gravity="center"
+                            android:text="Parede 2"
+                            android:textColor="@color/gray_text"
+                            android:textSize="25sp" />
 
-        <RelativeLayout
-            android:id="@+id/layout_wall2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/layout_wall1"
-            android:layout_marginBottom="15dp"
-            android:background="@drawable/bg_wall"
-            android:orientation="horizontal"
-            android:padding="20dp"
-            android:visibility="visible">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/icon_info" />
+                    </RelativeLayout>
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="60dp"
-                android:src="@drawable/icon_wall" />
+                    <RelativeLayout
+                        android:id="@+id/wall2_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_below="@id/wall2_header">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="70dp"
-                android:layout_marginStart="84dp"
-                android:fontFamily="@font/regular"
-                android:gravity="center"
-                android:text="Parede 2"
-                android:textSize="25sp" />
+                        <LinearLayout
+                            android:id="@+id/wal2_lineDoor"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/bg_info_wall"
+                            android:orientation="horizontal"
+                            android:padding="8dp">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="32dp"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:src="@drawable/icon_info" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="8"
+                                android:fontFamily="@font/black"
+                                android:text="Número de portas:"
+                                android:textSize="22sp" />
 
+                            <TextView
+                                android:id="@+id/wall2_portas"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:fontFamily="@font/black"
+                                android:text=""
+                                android:textSize="22sp" />
 
-        </RelativeLayout>
+                        </LinearLayout>
 
-        <RelativeLayout
-            android:id="@+id/layout_wall3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/layout_wall2"
-            android:layout_marginBottom="15dp"
-            android:background="@drawable/bg_wall"
-            android:orientation="horizontal"
-            android:padding="20dp"
-            android:visibility="visible">
+                        <LinearLayout
+                            android:id="@+id/wal2_lineWindow"
+                            android:layout_below="@id/wal2_lineDoor"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="8dp">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="60dp"
-                android:src="@drawable/icon_wall" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="8"
+                                android:fontFamily="@font/black"
+                                android:text="Número de janelas:"
+                                android:textSize="22sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="70dp"
-                android:layout_marginStart="84dp"
-                android:fontFamily="@font/regular"
-                android:gravity="center"
-                android:text="Parede 3"
-                android:textSize="25sp" />
+                            <TextView
+                                android:id="@+id/wall2_janelas"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:fontFamily="@font/black"
+                                android:text=""
+                                android:textSize="22sp" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="32dp"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:src="@drawable/icon_info" />
+                        </LinearLayout>
 
+                        <LinearLayout
+                            android:id="@+id/wal2_lineHeight"
+                            android:layout_below="@id/wal2_lineWindow"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/bg_info_wall"
+                            android:orientation="horizontal"
+                            android:padding="8dp">
 
-        </RelativeLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="40"
+                                android:fontFamily="@font/black"
+                                android:text="Altura:"
+                                android:textSize="22sp" />
 
-        <RelativeLayout
-            android:id="@+id/layout_wall4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/layout_wall3"
-            android:layout_marginBottom="15dp"
-            android:background="@drawable/bg_wall"
-            android:orientation="horizontal"
-            android:padding="20dp"
-            android:visibility="visible">
+                            <TextView
+                                android:id="@+id/wall2_altura"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:fontFamily="@font/black"
+                                android:text=""
+                                android:textSize="22sp" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="60dp"
-                android:src="@drawable/icon_wall" />
+                        </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="70dp"
-                android:layout_marginStart="84dp"
-                android:fontFamily="@font/regular"
-                android:gravity="center"
-                android:text="Parede 4"
-                android:textSize="25sp" />
+                        <LinearLayout
+                            android:layout_below="@id/wal2_lineHeight"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="8dp">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="32dp"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:src="@drawable/icon_info" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="40"
+                                android:fontFamily="@font/black"
+                                android:text="Largura:"
+                                android:textSize="22sp" />
 
+                            <TextView
+                                android:id="@+id/wall2_largura"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:fontFamily="@font/black"
+                                android:text=""
+                                android:textSize="22sp" />
 
-        </RelativeLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
 
-    </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/layout_wall3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout_wall2"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/bg_wall"
+                    android:orientation="horizontal"
+                    android:padding="20dp"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/wall3_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="60dp"
+                            android:src="@drawable/icon_wall" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="70dp"
+                            android:layout_marginStart="84dp"
+                            android:fontFamily="@font/regular"
+                            android:gravity="center"
+                            android:text="Parede 3"
+                            android:textColor="@color/gray_text"
+                            android:textSize="25sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/icon_info" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/wall3_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_below="@id/wall3_header">
+
+                        <LinearLayout
+                            android:id="@+id/wal3_lineDoor"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/bg_info_wall"
+                            android:orientation="horizontal"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="8"
+                                android:fontFamily="@font/black"
+                                android:text="Número de portas:"
+                                android:textSize="22sp" />
+
+                            <TextView
+                                android:id="@+id/wall3_portas"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:fontFamily="@font/black"
+                                android:text=""
+                                android:textSize="22sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/wal3_lineWindow"
+                            android:layout_below="@id/wal3_lineDoor"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="8"
+                                android:fontFamily="@font/black"
+                                android:text="Número de janelas:"
+                                android:textSize="22sp" />
+
+                            <TextView
+                                android:id="@+id/wall3_janelas"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:fontFamily="@font/black"
+                                android:text=""
+                                android:textSize="22sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/wal3_lineHeight"
+                            android:layout_below="@id/wal3_lineWindow"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/bg_info_wall"
+                            android:orientation="horizontal"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="40"
+                                android:fontFamily="@font/black"
+                                android:text="Altura:"
+                                android:textSize="22sp" />
+
+                            <TextView
+                                android:id="@+id/wall3_altura"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:fontFamily="@font/black"
+                                android:text=""
+                                android:textSize="22sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_below="@id/wal3_lineHeight"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="40"
+                                android:fontFamily="@font/black"
+                                android:text="Largura:"
+                                android:textSize="22sp" />
+
+                            <TextView
+                                android:id="@+id/wall3_largura"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:fontFamily="@font/black"
+                                android:text=""
+                                android:textSize="22sp" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_wall4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout_wall3"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/bg_wall"
+                    android:orientation="horizontal"
+                    android:padding="20dp"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/wall4_header">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="60dp"
+                            android:src="@drawable/icon_wall" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="70dp"
+                            android:layout_marginStart="84dp"
+                            android:fontFamily="@font/regular"
+                            android:gravity="center"
+                            android:text="Parede 4"
+                            android:textColor="@color/gray_text"
+                            android:textSize="25sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/icon_info" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/wall4_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_below="@id/wall4_header">
+
+                        <LinearLayout
+                            android:id="@+id/wal4_lineDoor"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/bg_info_wall"
+                            android:orientation="horizontal"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="8"
+                                android:fontFamily="@font/black"
+                                android:text="Número de portas:"
+                                android:textSize="22sp" />
+
+                            <TextView
+                                android:id="@+id/wall4_portas"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:fontFamily="@font/black"
+                                android:text=""
+                                android:textSize="22sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/wal4_lineWindow"
+                            android:layout_below="@id/wal4_lineDoor"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="8"
+                                android:fontFamily="@font/black"
+                                android:text="Número de janelas:"
+                                android:textSize="22sp" />
+
+                            <TextView
+                                android:id="@+id/wall4_janelas"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:fontFamily="@font/black"
+                                android:text=""
+                                android:textSize="22sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/wal4_lineHeight"
+                            android:layout_below="@id/wal4_lineWindow"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/bg_info_wall"
+                            android:orientation="horizontal"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="40"
+                                android:fontFamily="@font/black"
+                                android:text="Altura:"
+                                android:textSize="22sp" />
+
+                            <TextView
+                                android:id="@+id/wall4_altura"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:fontFamily="@font/black"
+                                android:text=""
+                                android:textSize="22sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_below="@id/wal4_lineHeight"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="40"
+                                android:fontFamily="@font/black"
+                                android:text="Largura:"
+                                android:textSize="22sp" />
+
+                            <TextView
+                                android:id="@+id/wall4_largura"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:fontFamily="@font/black"
+                                android:text=""
+                                android:textSize="22sp" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
 
     <RelativeLayout
         android:layout_width="match_parent"
