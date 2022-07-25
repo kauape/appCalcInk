@@ -3,9 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/appCalcInk/app/src/main/res/drawable/bg_form.xml" value="0.1285" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/appCalcInk/app/src/main/res/drawable/bg_wall.xml" value="0.116" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/appCalcInk/app/src/main/res/drawable/circle_button.xml" value="0.116" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/appCalcInk/app/src/main/res/drawable/lined_button.xml" value="0.1285" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/appCalcInk/app/src/main/res/drawable/round_button.xml" value="0.116" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/appCalcInk/app/src/main/res/layout/activity_form.xml" value="0.1796875" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/appCalcInk/app/src/main/res/layout/activity_main.xml" value="0.1542056074766355" />
       </map>
     </option>

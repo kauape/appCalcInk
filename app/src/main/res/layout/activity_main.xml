@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/bg"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".view.MainActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -25,13 +25,14 @@
 
                 <TextView
                     android:id="@+id/text_empty"
-                    android:layout_width="200dp"
+                    android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="150dp"
                     android:fontFamily="@font/light"
                     android:gravity="center"
                     android:text="SEM PAREDES ADICIONADAS"
+                    android:textColor="@color/gray_text"
                     android:textSize="28sp" />
 
                 <ImageView
@@ -93,8 +94,8 @@
                         android:id="@+id/wall1_info"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:visibility="gone"
-                        android:layout_below="@id/wall1_header">
+                        android:layout_below="@id/wall1_header"
+                        android:visibility="gone">
 
                         <LinearLayout
                             android:id="@+id/wal1_lineDoor"
@@ -110,6 +111,7 @@
                                 android:layout_weight="8"
                                 android:fontFamily="@font/black"
                                 android:text="Número de portas:"
+                                android:textColor="@color/black"
                                 android:textSize="22sp" />
 
                             <TextView
@@ -119,15 +121,16 @@
                                 android:layout_weight="3"
                                 android:fontFamily="@font/black"
                                 android:text=""
+                                android:textColor="@color/black"
                                 android:textSize="22sp" />
 
                         </LinearLayout>
 
                         <LinearLayout
                             android:id="@+id/wal1_lineWindow"
-                            android:layout_below="@id/wal1_lineDoor"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_below="@id/wal1_lineDoor"
                             android:orientation="horizontal"
                             android:padding="8dp">
 
@@ -137,6 +140,7 @@
                                 android:layout_weight="8"
                                 android:fontFamily="@font/black"
                                 android:text="Número de janelas:"
+                                android:textColor="@color/black"
                                 android:textSize="22sp" />
 
                             <TextView
@@ -146,15 +150,16 @@
                                 android:layout_weight="3"
                                 android:fontFamily="@font/black"
                                 android:text=""
+                                android:textColor="@color/black"
                                 android:textSize="22sp" />
 
                         </LinearLayout>
 
                         <LinearLayout
                             android:id="@+id/wal1_lineHeight"
-                            android:layout_below="@id/wal1_lineWindow"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_below="@id/wal1_lineWindow"
                             android:background="@color/bg_info_wall"
                             android:orientation="horizontal"
                             android:padding="8dp">
@@ -165,6 +170,7 @@
                                 android:layout_weight="40"
                                 android:fontFamily="@font/black"
                                 android:text="Altura:"
+                                android:textColor="@color/black"
                                 android:textSize="22sp" />
 
                             <TextView
@@ -174,14 +180,15 @@
                                 android:layout_weight="3"
                                 android:fontFamily="@font/black"
                                 android:text=""
+                                android:textColor="@color/black"
                                 android:textSize="22sp" />
 
                         </LinearLayout>
 
                         <LinearLayout
-                            android:layout_below="@id/wal1_lineHeight"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_below="@id/wal1_lineHeight"
                             android:orientation="horizontal"
                             android:padding="8dp">
 
@@ -191,6 +198,7 @@
                                 android:layout_weight="40"
                                 android:fontFamily="@font/black"
                                 android:text="Largura:"
+                                android:textColor="@color/black"
                                 android:textSize="22sp" />
 
                             <TextView
@@ -200,6 +208,7 @@
                                 android:layout_weight="3"
                                 android:fontFamily="@font/black"
                                 android:text=""
+                                android:textColor="@color/black"
                                 android:textSize="22sp" />
 
                         </LinearLayout>
@@ -221,6 +230,7 @@
                         android:id="@+id/wall2_header"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
+
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="60dp"
@@ -249,8 +259,8 @@
                         android:id="@+id/wall2_info"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:visibility="gone"
-                        android:layout_below="@id/wall2_header">
+                        android:layout_below="@id/wall2_header"
+                        android:visibility="gone">
 
                         <LinearLayout
                             android:id="@+id/wal2_lineDoor"
@@ -281,9 +291,9 @@
 
                         <LinearLayout
                             android:id="@+id/wal2_lineWindow"
-                            android:layout_below="@id/wal2_lineDoor"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_below="@id/wal2_lineDoor"
                             android:orientation="horizontal"
                             android:padding="8dp">
 
@@ -308,9 +318,9 @@
 
                         <LinearLayout
                             android:id="@+id/wal2_lineHeight"
-                            android:layout_below="@id/wal2_lineWindow"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_below="@id/wal2_lineWindow"
                             android:background="@color/bg_info_wall"
                             android:orientation="horizontal"
                             android:padding="8dp">
@@ -335,9 +345,9 @@
                         </LinearLayout>
 
                         <LinearLayout
-                            android:layout_below="@id/wal2_lineHeight"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_below="@id/wal2_lineHeight"
                             android:orientation="horizontal"
                             android:padding="8dp">
 
@@ -377,6 +387,7 @@
                         android:id="@+id/wall3_header"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
+
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="60dp"
@@ -404,8 +415,8 @@
                         android:id="@+id/wall3_info"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:visibility="gone"
-                        android:layout_below="@id/wall3_header">
+                        android:layout_below="@id/wall3_header"
+                        android:visibility="gone">
 
                         <LinearLayout
                             android:id="@+id/wal3_lineDoor"
@@ -436,9 +447,9 @@
 
                         <LinearLayout
                             android:id="@+id/wal3_lineWindow"
-                            android:layout_below="@id/wal3_lineDoor"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_below="@id/wal3_lineDoor"
                             android:orientation="horizontal"
                             android:padding="8dp">
 
@@ -463,9 +474,9 @@
 
                         <LinearLayout
                             android:id="@+id/wal3_lineHeight"
-                            android:layout_below="@id/wal3_lineWindow"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_below="@id/wal3_lineWindow"
                             android:background="@color/bg_info_wall"
                             android:orientation="horizontal"
                             android:padding="8dp">
@@ -490,9 +501,9 @@
                         </LinearLayout>
 
                         <LinearLayout
-                            android:layout_below="@id/wal3_lineHeight"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_below="@id/wal3_lineHeight"
                             android:orientation="horizontal"
                             android:padding="8dp">
 
@@ -529,9 +540,9 @@
                     android:visibility="gone">
 
                     <RelativeLayout
+                        android:id="@+id/wall4_header"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/wall4_header">
+                        android:layout_height="wrap_content">
 
                         <ImageView
                             android:layout_width="wrap_content"
@@ -560,8 +571,8 @@
                         android:id="@+id/wall4_info"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:visibility="gone"
-                        android:layout_below="@id/wall4_header">
+                        android:layout_below="@id/wall4_header"
+                        android:visibility="gone">
 
                         <LinearLayout
                             android:id="@+id/wal4_lineDoor"
@@ -592,9 +603,9 @@
 
                         <LinearLayout
                             android:id="@+id/wal4_lineWindow"
-                            android:layout_below="@id/wal4_lineDoor"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_below="@id/wal4_lineDoor"
                             android:orientation="horizontal"
                             android:padding="8dp">
 
@@ -619,9 +630,9 @@
 
                         <LinearLayout
                             android:id="@+id/wal4_lineHeight"
-                            android:layout_below="@id/wal4_lineWindow"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_below="@id/wal4_lineWindow"
                             android:background="@color/bg_info_wall"
                             android:orientation="horizontal"
                             android:padding="8dp">
@@ -646,9 +657,9 @@
                         </LinearLayout>
 
                         <LinearLayout
-                            android:layout_below="@id/wal4_lineHeight"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_below="@id/wal4_lineHeight"
                             android:orientation="horizontal"
                             android:padding="8dp">
 
